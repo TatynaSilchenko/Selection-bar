@@ -1,13 +1,13 @@
 import React from 'react';
 import styles from './ElementsSelector.module.css'
 import MainPage from "./MainPage/MainPage";
-import DialogPage from "./DialogPage/DialogPage";
+import DialogPageContainer from "./DialogPage/DialogPageContainer";
 
 const ElementsSelector = (props) => {
     return (
-        <div>
+        <div className={styles.elementsSelector}>
             <MainPage/>
-            <DialogPage/>
+            <DialogPageContainer/>
         </div>
     );
 }

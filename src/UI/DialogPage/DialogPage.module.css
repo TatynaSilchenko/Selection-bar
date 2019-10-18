@@ -1,3 +1,51 @@
-.dialogPage{
+.dialogPage {
+    position: absolute;
+    background-color: #4c4c4c;
+    padding: 20px;
+    color: white;
+}
+
+.dialogPage > div {
+    margin-bottom: 15px;
+}
+
+.closeDialogButton {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    cursor: pointer;
+    background-color: #656565;
+    border: none;
+    color: white;
+}
+
+.header {
+    text-align: center;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filters > label {
+    margin-right: 15px;
+}
+
+.elementsBlock {
+    display: flex;
+    flex-direction: column;
+    max-height: 200px;
+    overflow: auto;
+    background-color: black;
+}
+.elementsBlock >div{
+   padding: 5px;
+}
+.selectedElements {
+
+}
+
+.buttons {
 
 }

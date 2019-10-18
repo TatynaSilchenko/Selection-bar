@@ -1,0 +1,10 @@
+.customButton {
+    background-color: #622764 ;
+    color: white;
+    padding: 10px;
+    margin-right: 15px;
+}
+.customButton:disabled{
+    background-color:#644e5e;
+    color:black;
+}
