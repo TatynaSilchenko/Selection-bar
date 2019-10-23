@@ -1,22 +1,12 @@
-import React from 'react';
-import styles from './MainPage.module.css'
-import SelectedElementTag from "./SelectedElementTag";
-import Button from "./Button";
-
-const MainPage = ({elements=[]}) => {
-    return <div className={styles.mainPage}>
-        <div> На данный момент у Вас выбрано {elements.length} элемент[a]:</div>
-        <div className={styles.selectedElements}>
-            <SelectedElementTag />
-            <SelectedElementTag />
-        </div>
-        <div className={styles.customButton}>
-            <Button>Изменить мой выбор</Button>
-        </div>
+import MainPage from "./MainPage";
+import {connect} from "react-redux";
+import {visibleSelectionWindow} from "../../REDUX/ElementsReduser";
 
 
-
-    </div>
-
-}
-export default MainPage
+const mapStateToProps = (state) => ({
+        selectedElements: state.elements.selectedElements,
+        visibleWindow:state.elements.visibleWindow
+    }
+)
+const MainPageContainer= connect(mapStateToProps, {visibleSelectionWindow})(MainPage);
+export default MainPageContainer
