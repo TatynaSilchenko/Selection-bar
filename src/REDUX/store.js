@@ -1,9 +1,10 @@
-import {combineReducers, createStore} from "redux";
+import {applyMiddleware, combineReducers, createStore} from "redux";
 import ElementsReduser from "./ElementsReduser";
+import thunk from "redux-thunk";
 
 const reducers=combineReducers({
-        elements: ElementsReduser
+        elementsReduser: ElementsReduser
     }
 )
-const store=createStore(reducers);
+const store=createStore(reducers,applyMiddleware(thunk));
 export default store;
