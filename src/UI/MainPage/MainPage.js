@@ -11,16 +11,13 @@ const MainPage = ({elements=[],selectedElements=[],...props}) => {
     }
 
     return <div className={styles.mainPage}>
-        <div> На данный момент у Вас выбрано {elements.length} элемент[a]:</div>
+        <div> На данный момент у Вас выбрано {selectedElements.length} элемент[a]:</div>
         <div className={styles.selectedElements}>
-            {selectedElements.map(el=><SelectedElementTag title={el}  disabled={false} />)}
+            {selectedElements.map(el=><SelectedElementTag element={el}  disabled={false} />)}
         </div>
         <div className={styles.customButton}>
             <Button onClick={onSelectionChange} disabled={props.visibleWindow}>Изменить мой выбор</Button>
         </div>
-
-
-
     </div>
 
 }

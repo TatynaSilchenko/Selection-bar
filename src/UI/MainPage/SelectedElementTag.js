@@ -1,13 +1,14 @@
 import React from 'react';
 import styles from './SelectedElementTag.module.css'
 
-const SelectedElementTag = ({title,setUnselectedElement, ...props}) => {
+const SelectedElementTag = ({element,setUnselectedElement, ...props}) => {
+
     let onUnselectElement=(e)=>{
-        setUnselectedElement(title)
+        setUnselectedElement(element)
     }
 
     return <div className={styles.selectedElementTag}>
-        {title} | <button className={styles.removeButton}
+        {element.title} | <button className={styles.removeButton}
                           onClick={onUnselectElement} >X</button>
     </div>
 

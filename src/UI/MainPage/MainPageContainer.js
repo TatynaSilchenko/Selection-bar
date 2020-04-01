@@ -4,8 +4,8 @@ import {visibleSelectionWindow} from "../../REDUX/ElementsReduser";
 
 
 const mapStateToProps = (state) => ({
-        selectedElements: state.elements.selectedElements,
-        visibleWindow:state.elements.visibleWindow
+        selectedElements: state.elementsReduser.selectedElements,
+        visibleWindow:state.elementsReduser.visibleWindow
     }
 )
 const MainPageContainer= connect(mapStateToProps, {visibleSelectionWindow})(MainPage);
